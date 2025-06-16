@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "install-client": "cd frontend && npm install",
-    "install-server": "cd backend && npm install",
-    "build-client": "cd frontend && npm run build",
+    "install-server": "cd backend && npm install", 
+    "build-client": "cd frontend && npx react-scripts build",
     "build": "npm run install-client && npm run install-server && npm run build-client",
     "start": "node backend/server.js"
-  }, 
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
