@@ -4,10 +4,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon backend/server.js",
-    "client": "npm --prefix frontend start"
-  },
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "server": "nodemon backend/server.js",
+  "client": "npm --prefix frontend start",
+  "install-client": "cd frontend && npm install",
+  "install-server": "cd backend && npm install",
+  "build": "cd frontend && npm run build",
+  "heroku-postbuild": "npm run install-client && npm run install-server && npm run build",
+  "start": "node backend/server.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
