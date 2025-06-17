@@ -98,7 +98,6 @@ const emitConversationUpdate = async (conversationId) => {
       emitToUser(participant._id.toString(), "updateConversation", updatedConversation);
     });
     
-    console.log(`Conversation ${conversationId} update emitted to all participants`);
   } catch (error) {
     console.error('Error emitting conversation update:', error);
   }
